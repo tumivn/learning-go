@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-//tuple is a finite sorted list of elements, immutable sequential collection
-func powerSeries(a int)(int, int, error){
-	return a*a, a*a*a, nil
+// tuple is a finite-sorted list of elements, immutable sequential collection
+func powerSeries(a int) (int, int, error) {
+	return a * a, a * a * a, nil
 }
 
-func main(){
+func main() {
 	var square int
 	var cube int
 	var err error
@@ -16,7 +16,7 @@ func main(){
 
 	if err == nil {
 		fmt.Println("Square ", square, " Cube ", cube)
-	}else {
+	} else {
 		fmt.Println("Error ", err)
 	}
 }

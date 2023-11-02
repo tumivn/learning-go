@@ -1,3 +1,4 @@
+// main package: 02-first-web-app/main.go
 package main
 
 import (
@@ -20,6 +21,7 @@ func main() {
 	}
 }
 
+// Rsvp is a struct that holds the RSVP data
 type Rsvp struct {
 	Name, Email, Phone string
 	WillAttend         bool
@@ -44,11 +46,11 @@ func loadTemplates() {
 	}
 }
 
-func welcomeHandler(w http.ResponseWriter, r *http.Request) {
+func welcomeHandler(w http.ResponseWriter, _ *http.Request) {
 	templates["welcome"].Execute(w, nil)
 }
 
-func listHandler(w http.ResponseWriter, r *http.Request) {
+func listHandler(w http.ResponseWriter, _ *http.Request) {
 	templates["list"].Execute(w, responses)
 }
 
