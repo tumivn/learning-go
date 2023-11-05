@@ -1,4 +1,4 @@
-// main package: 02-first-web-app/main.go
+// main package: 30-first-web-app/main.go
 package main
 
 import (
@@ -36,7 +36,7 @@ func loadTemplates() {
 	templateNames := [5]string{"welcome", "form", "thanks", "sorry", "list"}
 
 	for index, name := range templateNames {
-		t, err := template.ParseFiles("layout.html", name+".html")
+		t, err := template.ParseFiles("templates/layout.html", "templates/"+name+".html")
 		if err == nil {
 			templates[name] = t
 			println("Loaded template ", index, name)
